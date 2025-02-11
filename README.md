@@ -22,3 +22,9 @@ This project analyzes bikeshare data from three major U.S. cities: Chicago, New 
 ### Credits
 This project is part of the Udacity Data Science Nanodegree.
 
+### How to Run the Script
+To analyze bikeshare data, run the following command in your terminal:
+    python bikeshare.py
+    
+You will be prompted to enter a city, month, and day to filter the data.
+

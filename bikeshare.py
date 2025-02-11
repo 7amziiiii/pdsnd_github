@@ -1,3 +1,18 @@
+"""
+Bikeshare Data Analysis
+
+This script allows users to explore US bikeshare data for three cities:
+- Chicago
+- New York City
+- Washington
+
+Users can filter the data by month and day to get insights on:
+- The most common travel times
+- The most popular stations
+- Trip duration statistics
+- User demographics
+"""
+
 import time
 import pandas as pd
 import numpy as np
@@ -18,19 +33,21 @@ def get_filters():
     """
     Asks user to specify a city, month, and day for analysis.
     Returns:
-        (str) city
-        (int) month
-        (int) day
+        (str) city: The chosen city for analysis
+        (int) month: Month filter (1-6) or 0 for no filter
+        (int) day: Day filter (1-7) or 0 for no filter
     """
     print("Hello! Let's explore some US bikeshare data.")
 
+    # Get user input for city
     while True:
         city = input("Choose a city (chicago, new york city, washington): ").strip().lower()
         if city in CITY_DATA:
             break
         else:
-            print("Invalid city name.")
+            print("Invalid city name. Please enter one of the available cities.")
 
+    # Get user input for month (1-6) or 0 for no filter
     while True:
         month = input("Select a month as number (1-6) please or 0 for no filter: ").strip()
         if 0 <= int(month) <= 6:
@@ -39,6 +56,7 @@ def get_filters():
         else:
             print("Invalid entry. Please enter a number between 0 and 6.")
 
+    # Get user input for day (1-7) or 0 for no filter
     while True:
         day = input("Select a day (1-7) or 0 for no filter:").strip()
         if 0 <= int(day) <= 7:
@@ -49,6 +67,7 @@ def get_filters():
 
     print("-" * 40)
     return city, month, day
+
 
 def load_data(city, month, day):
     """
