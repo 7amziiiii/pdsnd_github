@@ -17,17 +17,17 @@ import time
 import pandas as pd
 import numpy as np
 
-CITY_DATA = {
-    'chicago': 'C:/Users/Hamza/Desktop/all/chicago.csv',
-    'new york city': 'C:/Users/Hamza/Desktop/all/new_york_city.csv',
-    'washington': 'C:/Users/Hamza/Desktop/all/washington.csv'
-}
-
 # CITY_DATA = {
-#     'chicago': 'chicago.csv',
-#     'new york city': 'new_york_city.csv',
-#     'washington': 'washington.csv'
+#     'chicago': 'C:/Users/Hamza/Desktop/all/chicago.csv',
+#     'new york city': 'C:/Users/Hamza/Desktop/all/new_york_city.csv',
+#     'washington': 'C:/Users/Hamza/Desktop/all/washington.csv'
 # }
+
+CITY_DATA = {
+    'chicago': 'chicago.csv',
+    'new york city': 'new_york_city.csv',
+    'washington': 'washington.csv'
+}
 
 def get_filters():
     """
@@ -183,6 +183,6 @@ def main():
             print("Thanks for exploring bikeshare data! Goodbye.")
             break
 
-
+# just some changes
 if __name__ == "__main__":
     main()
